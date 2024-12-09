@@ -1,0 +1,292 @@
+@media (min-width:200px) and (max-width:1024px){
+    
+        // Search Bar 
+    form {
+        width:70%;
+        height: 50px;
+        z-index: 0;
+
+        input {
+            font-size: 12px;
+        }
+        button {
+            height: 105%;
+            background-color: #FF9933;
+            padding: 0px 20px;
+            font-size: 12px;
+        }
+    }
+        // Search bar Ends 
+        // Checker Bars Start from here 
+    #bars {
+        display: block;
+        color: #FF9933;
+        position: absolute;
+        right: 20px;
+        line-height: 80px;
+        font-size: 35px;
+        z-index: 10;        
+    }
+    #checker:checked ~ .nav ul {
+        left: 0;
+    }
+    // Checker Bars Ends Here
+    
+// headtop part start from here 
+    #headtop {
+        .logo {
+            font-size: 120%;
+            padding-left: 0px;
+        }
+        .contact {
+            display: none;
+        }
+        
+        .icon {
+            display: none;
+        }
+    }
+    // headtop part Ends from here 
+    // navbar start from here 
+    .nav {
+        position: static;
+        ul{
+            width: 100%;
+            height: 100vh;
+            background-color:#34AD54;
+            position: absolute;
+            top: 80px;
+            left: -100%;
+            transition: .7s;
+            z-index: 1;
+            li {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+        // navbar Ends from here 
+
+// index home section start             
+    #home {
+        max-width: 100%;
+        height:max-content;
+        .homecontent {
+            font-size: 25px;
+            padding: 20%;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            line-height: 40px;
+
+            
+            button {
+                margin-top: 10px;
+                background-color: #FF9933;
+                border: 0px;
+                border-radius: 5px;
+                padding: 15px 0;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    } 
+    // index Home Section Ends From Here
+
+    // Front Page of others for Every Page Start From here
+    #aboutsection {
+        max-width: 100%;
+        height: max-content;
+        background-size:auto;
+
+        .topcontent {
+            left: 10px; 
+            font-size: 25px;
+            padding: 15%;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 3px;
+            line-height: 50px;
+            h1 {
+                font-size: 30px;
+            }        
+            button {
+                background-color: #FF9933;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    // Front Page of others Ends here
+
+// middle section start from here 
+    #middle {
+        display: inline;
+    }
+// middle section Ends here 
+// about home section start from Here
+    #about {
+        max-width: 100%;
+        margin: 100px 2px 0px 2px;   
+        height: max-content;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .about-left {
+            border: 5px solid #34AD54;
+            border-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            flex-basis: 50%;
+            img {
+                max-width: 90%;
+            }
+        }
+        .about-right {
+            font-size: 80%;
+            
+            p {
+                padding: 10px;
+            }
+        }
+    }
+// about home section ends from Here
+
+    // our services start from here  
+    #ourservice {
+        height: auto;
+        
+        .myheading{ 
+            padding: 10px;
+        } 
+        #box{  
+            display: grid; 
+            grid-template-columns: auto; 
+            width: 80%;  
+            margin-left: 10%;
+            p {
+                font-size: 80%;
+                padding:0 10%;
+            }    
+        }
+    }
+    // client part start from here 
+    #outerbox {
+        margin: 5% 0;
+        .innerbox 
+            .text {
+                line-height: 1.5;
+            }
+            .photo {
+                width: 100px;
+                height: 100px;            
+            }
+    }
+    // client section ended
+// Our Services Ends 
+
+// product or Feature section start 
+    #main {
+        height: auto;
+        margin-top: 100px;
+
+        #mainhead {
+            padding: 10px;
+        }
+
+        #mainbox {
+            flex-direction: column;
+            .mainimg {
+                width: 100%;
+                 img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // product or Feature section Ends Here
+
+    // about section Start From Here
+    #members{ 
+        display: inline;
+        justify-content: center;
+        max-width: 100%;
+        height: 300px;
+        margin: 0;
+        .teamText{ 
+            display: block; 
+            justify-content: center; 
+            text-align: center; 
+            font-size: 25px; 
+            font-weight: 600;
+            padding: 10px;
+        }
+        .teambox{ 
+            display: grid; 
+            grid-template-columns: auto; 
+            justify-content: center; 
+            gap: 5px; 
+
+            .box{ 
+                width: 300px;    
+                height: 350px;
+                justify-content: center;
+                background-color: #FF9933;
+                border: 1px solid #1b6671; 
+                text-align: center;
+                } 
+                .boxcontent{
+                    padding: 5%;
+                    font-size: 15px;
+                    letter-spacing: 3px;
+                    color:green;
+                }
+            }
+        }
+// about section ends here
+// page section start from here 
+#page {
+    margin: 5% 7%;
+    width: 80%; 
+    height:fit-content;
+    .outerbox {
+        display: grid; 
+        grid-template-columns: auto; 
+        gap: 20px;
+
+    }
+}
+        // page section ends from here 
+
+// footer part start from here 
+    footer {
+        .footercontent .row1 {
+            padding: 10px;
+            flex-direction: column;
+        }
+    }
+
+
+
+
+
+
+}
+                
+
+
+
+
+
+
+// @media (min-width:576px) and (max-width:991px) {

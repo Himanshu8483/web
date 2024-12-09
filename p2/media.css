@@ -1,0 +1,230 @@
+@media (min-width: 200px) and (max-width: 1024px) {
+  form {
+    width: 70%;
+    height: 50px;
+    z-index: 0;
+  }
+  form input {
+    font-size: 12px;
+  }
+  form button {
+    height: 105%;
+    background-color: #FF9933;
+    padding: 0px 20px;
+    font-size: 12px;
+  }
+  #bars {
+    display: block;
+    color: #FF9933;
+    position: absolute;
+    right: 20px;
+    line-height: 80px;
+    font-size: 35px;
+    z-index: 10;
+  }
+  #checker:checked ~ .nav ul {
+    left: 0;
+  }
+  #headtop .logo {
+    font-size: 120%;
+    padding-left: 0px;
+  }
+  #headtop .contact {
+    display: none;
+  }
+  #headtop .icon {
+    display: none;
+  }
+  .nav {
+    position: static;
+  }
+  .nav ul {
+    width: 100%;
+    height: 100vh;
+    background-color: #34AD54;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  .nav ul li {
+    display: block;
+    text-align: center;
+  }
+  #home {
+    max-width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  #home .homecontent {
+    font-size: 25px;
+    padding: 20%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 40px;
+  }
+  #home .homecontent button {
+    margin-top: 10px;
+    background-color: #FF9933;
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px 0;
+  }
+  #home .homecontent button a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  #aboutsection {
+    max-width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    background-size: auto;
+  }
+  #aboutsection .topcontent {
+    left: 10px;
+    font-size: 25px;
+    padding: 15%;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
+  #aboutsection .topcontent h1 {
+    font-size: 30px;
+  }
+  #aboutsection .topcontent button {
+    background-color: #FF9933;
+  }
+  #aboutsection .topcontent button a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  #middle {
+    display: inline;
+  }
+  #about {
+    max-width: 100%;
+    margin: 100px 2px 0px 2px;
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #about .about-left {
+    border: 5px solid #34AD54;
+    border-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+  }
+  #about .about-left img {
+    max-width: 90%;
+  }
+  #about .about-right {
+    font-size: 80%;
+  }
+  #about .about-right p {
+    padding: 10px;
+  }
+  #ourservice {
+    height: auto;
+  }
+  #ourservice .myheading {
+    padding: 10px;
+  }
+  #ourservice #box {
+    display: grid;
+    grid-template-columns: auto;
+    width: 80%;
+    margin-left: 10%;
+  }
+  #ourservice #box p {
+    font-size: 80%;
+    padding: 0 10%;
+  }
+  #outerbox {
+    margin: 5% 0;
+  }
+  #outerbox .innerbox .text {
+    line-height: 1.5;
+  }
+  #outerbox .photo {
+    width: 100px;
+    height: 100px;
+  }
+  #main {
+    height: auto;
+    margin-top: 100px;
+  }
+  #main #mainhead {
+    padding: 10px;
+  }
+  #main #mainbox {
+    flex-direction: column;
+  }
+  #main #mainbox .mainimg {
+    width: 100%;
+  }
+  #main #mainbox .mainimg img {
+    width: 100%;
+  }
+  #members {
+    display: inline;
+    justify-content: center;
+    max-width: 100%;
+    height: 300px;
+    margin: 0;
+  }
+  #members .teamText {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  #members .teambox {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 5px;
+  }
+  #members .teambox .box {
+    width: 300px;
+    height: 350px;
+    justify-content: center;
+    background-color: #FF9933;
+    border: 1px solid #1b6671;
+    text-align: center;
+  }
+  #members .teambox .boxcontent {
+    padding: 5%;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: green;
+  }
+  #page {
+    margin: 5% 7%;
+    width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #page .outerbox {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  footer .footercontent .row1 {
+    padding: 10px;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=media.css.map */

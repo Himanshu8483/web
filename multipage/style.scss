@@ -1,0 +1,39 @@
+// partial for securing css
+@import '_style.scss';
+
+
+// mixin
+@mixin button () {
+    background-color: $thirdcolor; // variable define in partial
+    font-size: 20px;
+    border: 1px solid green;
+    padding: 10px;
+}
+// nesting
+p {
+    font-size: $fontsize;
+    color: $seccolor;
+}
+
+#name {
+    p {
+        color: $precolor;
+        font-size: $fontsize*2;
+        span {
+            color: green;
+        }
+    }
+    h2{
+        color: blue;
+    }
+    .btn1 {
+        @include button(); // mixin
+    }
+}
+.btn2 {
+    // background-color: red;
+    // font-size: 20px;
+    // border: 1px solid green;
+    // padding: 10px;
+    @include button(); 
+}

@@ -1,0 +1,28 @@
+p {
+  font-size: 50px;
+  color: red;
+}
+
+#name p {
+  color: blue;
+  font-size: 100px;
+}
+#name p span {
+  color: green;
+}
+#name h2 {
+  color: blue;
+}
+#name .btn1 {
+  background-color: green;
+  font-size: 20px;
+  border: 1px solid green;
+  padding: 10px;
+}
+
+.btn2 {
+  background-color: green;
+  font-size: 20px;
+  border: 1px solid green;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
