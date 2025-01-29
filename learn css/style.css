@@ -1,0 +1,134 @@
+/* === Pseudo-Elements === */
+/* Pseudo-elements are 'virtual' parts of an element */
+.element::before {
+    content: "Before content"; /* Adds text/content before the element */
+    color: red; /* Text color */
+    font-weight: bold; /* Makes the text bold */
+  }
+  .element::after {
+    content: "After content"; /* Adds text/content after the element */
+    color: blue;
+    font-style: italic; /* Makes the text italic */
+  }
+  
+  /* === Pseudo-classes === */
+  /* Pseudo-classes apply styles during specific states */
+  .element:hover {
+    /* When the mouse hovers over the element */
+    color: orangered; /* Change text color */
+    transform: scale(1.1); /* Slightly enlarges the element */
+    transition: transform 0.9s ease; /* Smooth transition */
+  }
+  
+  .element:active {
+    /* When the element is clicked */
+    background-color: red; /* Change background color */
+  }
+  
+  .element:focus {
+    /* When the element gains focus (like input fields) */
+    border: 5px solid red;
+  }
+  
+  /* === Keyframes and Animation === */
+  /* Animating an element with custom movements or effects */
+  @keyframes exampleAnimation {
+    0% {
+      transform: translateX(0); /* Start at original position */
+      opacity: 1; /* Fully visible */
+    }
+    50% {
+      transform: translateX(50px); /* Move right */
+      opacity: 0.5; /* Semi-transparent */
+    }
+    100% {
+      transform: translateX(0); /* Back to original position */
+      opacity: 1;
+    }
+  }
+  
+  .animated-element {
+    animation: exampleAnimation 2s infinite; /* Uses the custom animation */
+  }
+  
+  /* === Hover Effects === */
+  .hover-effect {
+    background-color: lightblue;
+    transition: all 0.9s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .hover-effect:hover {
+    background-color: darkblue; /* Changes background color */
+    color: white; /* Changes text color */
+    transform: scale(1.2); /* Enlarges the element */
+  }
+  
+  /* === Active States === */
+  .button:active {
+    /* Styles for buttons or clickable elements when clicked */
+    transform: scale(0.95); /* Slightly reduce size */
+    box-shadow: 0 4px 8px rgba(28, 16, 16, 0.9); /* Add a shadow */
+  }
+  
+  /* === Transformations === */
+  /* Useful for rotations, scaling, etc. */
+  .transform-box {
+    transform: rotate(45deg); /* Rotates the element */
+    transition: transform 0.5s ease; /* Smooth rotation */
+  }
+  
+  /* === Transition === */
+  /* Smooth change of properties */
+  .transition-box {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .transition-box:hover {
+    background-color: darkgreen;
+    transform: translateY(-10px); /* Moves up */
+  }
+  
+  /* === Media Query for Responsive Design === */
+  /* Change styles based on screen size */
+  @media (max-width: 768px) {
+    .responsive-box {
+      width: 100%; /* Full width on smaller screens */
+      background-color: yellow;
+    }
+  }
+  
+  /* === Box Shadow === */
+  /* Add shadow effects */
+  .shadow-box {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    box-shadow: 4px 4px 8px #000000; /* Adds shadow */
+  }
+  
+  /* === Gradient Background === */
+  .gradient-box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, red, orange, yellow);
+  }
+  
+  /* === Opacity and Visibility === */
+  .opacity-box {
+    opacity: 0.5; /* 50% transparency */
+  }
+  
+  .visibility-box {
+    visibility: hidden; /* Hides the element but keeps its space */
+  }
+  
+  /* === Z-Index === */
+  /* Control stacking of elements */
+  .z-index-box {
+    /* position: relative; */
+    z-index: 10; /* Higher numbers are on top */
+  }
+  

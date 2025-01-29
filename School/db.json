@@ -1,0 +1,114 @@
+{
+    "Fees": [
+    {
+        "Name": "Himanshu",
+        "Age": "22",
+        "Roll No":"101",
+        "Class":"10th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Jatin",
+        "Age": "24",
+        "Roll No":"102",
+        "Class":"11th",
+        "Section":"B",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Vijay",
+        "Age": "23",
+        "Roll No":"103",
+        "Class":"11th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Yash",
+        "Age": "22",
+        "Roll No":"104",
+        "Class":"10th",
+        "Section":"B",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Rohit",
+        "Age": "25",
+        "Roll No":"105",
+        "Class":"11th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Sushant",
+        "Age": "21",
+        "Roll No":"106",
+        "Class":"10th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Supriti",
+        "Age": "23",
+        "Roll No":"107",
+        "Class":"12th",
+        "Section":"B",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Neetu",
+        "Age": "30",
+        "Roll No":"108",
+        "Class":"12th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Shradhha",
+        "Age": "16",
+        "Roll No":"109",
+        "Class":"9th",
+        "Section":"A",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    },
+    {
+        "Name": "Mukul",
+        "Age": "14",
+        "Roll No":"110",
+        "Class":"9th",
+        "Section":"B",
+        "Tution Fees":"4000",
+        "Library Fees":"500",
+        "Exam Fees": "1500",
+        "Total Fees": "6000"
+    }
+    ]
+}

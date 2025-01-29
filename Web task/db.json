@@ -1,0 +1,14 @@
+{
+  "Fees": {
+    "9th": { "Tuition": 5000, "Library": 1500, "Exam": 800 },
+    "10th": { "Tuition": 6000, "Library": 2000, "Exam": 1000 },
+    "11th": { "Tuition": 7000, "Library": 2500, "Exam": 1200 },
+    "12th": { "Tuition": 8000, "Library": 3000, "Exam": 1500 }
+  },
+  "Students": [
+    { "Name": "Himanshu", "Roll": "1234", "Class": "12th" },
+    { "Name": "Jatin", "Roll": "4321", "Class": "10th" },
+    { "Name": "Yash", "Roll": "1243", "Class": "9th" },
+    { "Name": "Vijay", "Roll": "3412", "Class": "11th" }
+  ]
+}

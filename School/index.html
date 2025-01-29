@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Fees Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>School Fees Management System</h2>
+        <label for="class">Class:</label>
+        <select id="class">
+            <option value="">Class</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+            <option value="11">Class 11</option>
+            <option value="12">Class 12</option>
+        </select>
+
+        <label for="section">Section:</label>
+        <select id="section">
+            <option value="">Section</option>
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+        </select>
+        
+        <label for="rollNo">Roll No:</label>
+        <input type="number" id="rollNo">
+        <button onclick="searchStudent()">Search</button>
+        <br><br>
+        <table>
+            <thead>
+                <tr>    
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Roll No</th>
+                    <th>Fees Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable">
+                <!-- Student details will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+let students = [
+    { name: "Himanshu", class: "9", section: "A", rollNo: 901, feesPaid: false },
+    { name: "Jatin", class: "9", section: "B", rollNo: 902, feesPaid: false },
+    { name: "Vijay", class: "9", section: "A", rollNo: 903, feesPaid: false },
+    { name: "Yash", class: "10", section: "B", rollNo: 1001, feesPaid: true },
+    { name: "Shradha", class: "10", section: "A", rollNo: 1002, feesPaid: true },
+    { name: "Dhruv", class: "10", section: "B", rollNo: 1003, feesPaid: true },
+    { name: "Sushant", class: "11", section: "A", rollNo: 1101, feesPaid: false },
+    { name: "Supriti", class: "11", section: "B", rollNo: 1102, feesPaid: false },
+    { name: "Rohit", class: "11", section: "A", rollNo: 1103, feesPaid: false },
+    { name: "Vikas", class: "12", section: "B", rollNo: 1201, feesPaid: true },
+    { name: "Neetu", class: "12", section: "A", rollNo: 1202, feesPaid: true },
+    { name: "Indrajeet", class: "12", section: "B", rollNo: 1203, feesPaid: true }
+];
+
+let searchStudent = () => {
+    let selectedClass = document.querySelector("#class").value;
+    let selectedSection = document.querySelector("#section").value;
+    let rollNo = parseInt(document.querySelector("#rollNo").value);
+    let tableBody = document.querySelector("#studentTable");
+    tableBody.innerHTML = ""; // Clear previous results
+
+    let matchingStudents = students.filter(s =>
+        (selectedClass === "" || s.class === selectedClass) &&
+        (selectedSection === "" || s.section === selectedSection) &&
+        (isNaN(rollNo) || s.rollNo === rollNo)
+    );
+
+    if (matchingStudents.length > 0) {
+        matchingStudents.map(student => {
+            // Load student fee status from localStorage
+            let storedFeesStatus = localStorage.getItem(`feesPaid_${student.rollNo}`);
+            if (storedFeesStatus !== null) {
+                student.feesPaid = storedFeesStatus === 'true';
+            }
+
+            let row = `<tr>
+                <td>${student.name}</td>
+                <td>${student.class}</td>
+                <td>${student.section}</td>
+                <td>${student.rollNo}</td>
+                <td>${student.feesPaid ? "Paid" : "Not Paid"}</td>
+                <td>${!student.feesPaid ? `<button onclick="payFees(${student.rollNo})">Pay Now</button>` : "Paid"}</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    } else {
+        tableBody.innerHTML = "<tr><td colspan='6'>No student found</td></tr>";
+    }
+}
+
+let payFees = (rollNo) => {
+    let student = students.find(s => s.rollNo === rollNo);
+    if (student) {
+        student.feesPaid = true;
+        // Save the updated fees status in localStorage
+        localStorage.setItem(`feesPaid_${student.rollNo}`, 'true');
+        alert("Fees paid successfully!");
+        searchStudent(); // Refresh the table to reflect the changes
+    }
+}
+
+    </script>
+</body>
+</html>
