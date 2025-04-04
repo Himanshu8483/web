@@ -1,10 +1,194 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+section{
+    height: 100vh;
+    border: 2px solid aquamarine;
+
 }
 #sec1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+h1{
+    position: relative;
+    width: max-content;
+    color: brown;
+}
+h1::after{
+    content: '';
+    background: linear-gradient(to right, brown, green, blue);
+    height: 4px;
+    border-radius: 10px;
+    width: 0%;
+    position: absolute;     /*pseudo element visible */
+    /* now top bottom left right property can be used after postion property */
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+
+}
+h1:hover::after{
+    width: 100%;
+}
+
+button{
+    padding: 1em 3em;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #2abfff, #0071ff);
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+}
+button::after{
+    content: '';
+    background: linear-gradient(to right, #ffee00, #ffb300);
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+button:hover::after{
+    width: 100%;
+
+}
+
+#sec2 .card{
+    margin: 0 auto;
+    padding: 2em;
+    width: 350px;
+    text-align: center;
+    background-color: #1c1f2b;
+    border-radius: 10px;
+    position: relative;
+    top: 30%;
+}
+@property --a{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.card::after, .card::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--a),transparent 80%, #ff4545, #00ff99,#ff4545, #006aff, #ff0095);
+    animation: 3s spin linear infinite;
+}
+
+.card::before{
+    filter:blur(1.5rem);
+    opacity: 0.6;
+}
+@keyframes spin{
+    from{
+        --a:0deg;
+    }
+    to{
+        --a:360deg;
+    }
+}
+
+#sec3{
     width: 100%;
     height: 100vh;
-    background-color: aquamarine;
+}
+#sec3 div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: brown;
+    box-shadow: 0 0 0 15px brown;
+    transition: .5s;
+    box-sizing: border-box;
+
+}
+#sec3 div:hover{
+    border-radius: 0%;
+}
+#sec3 div::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:brown;
+    z-index: -1;
+    transform: rotate(-45deg);
+}
+#sec3 div p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+    padding: 5%;
+
+}
+#sec3 div:hover p{
+
+    box-shadow: 0 0 50px rgba(0,0,0, 1);
+}
+
+#sec4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sec4 div{
+    width: 200px;
+    height: 50%;
+    background-color: brown;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    text-transform:capitalize;
+    transition: transform 1s ease;
+}
+#sec4 div:hover{
+    transform: scale(1.1);
+}
+#sec4 .red{
+    background: linear-gradient(to bottom, beige, red);
+}
+#sec4 .green{
+    background: linear-gradient(to bottom, beige, green);
+}
+#sec4 .yellow{
+    background: linear-gradient(to bottom, beige, yellow);
+}
+#sec4 .pink{
+    background: linear-gradient(to bottom, beige, pink);
+}
+#sec4 .blue{
+    background: linear-gradient(to bottom, beige, blue);
 }
