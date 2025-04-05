@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Users</title>
+</head>
+<body>
+    <h2>Search Users</h2>
+    <input type="text" id="searchInput" placeholder="Search by name or email..." onkeyup="searchUsers()">
+    <ul id="userList"></ul>
+
+    <script>
+        const users = [
+            { name: "Himanshu", email: "himanshu@example.com" },
+            { name: "Ankit", email: "ankit@example.com" },
+            { name: "Priya", email: "priya@example.com" },
+            { name: "Rahul", email: "rahul@example.com" }
+        ];
+
+        function searchUsers() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const userList = document.getElementById("userList");
+
+            const filteredUsers = query
+                ? users.filter(user => user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query))
+                : users; // If query is empty, show all users
+
+            // Display results
+            userList.innerHTML = filteredUsers.map(user => `<li><strong>${user.name}</strong> - ${user.email}</li>`).join("");
+        }
+
+        // Show all users on page load
+        searchUsers();
+    </script>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Users</title>
+</head>
+<body>
+    <h2>Search Users</h2>
+    <input type="text" id="searchInput" placeholder="Search by name or email..." onkeyup="searchUsers()">
+    <ul id="userList" style="display: none;"></ul>
+
+    <script>
+        const users = [
+            { name: "Himanshu", email: "himanshu@example.com" },
+            { name: "Ankit", email: "ankit@example.com" },
+            { name: "Priya", email: "priya@example.com" },
+            { name: "Rahul", email: "rahul@example.com" }
+        ];
+
+        function searchUsers() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const userList = document.getElementById("userList");
+
+            if (query === "") {
+                userList.style.display = "none"; // Hide the list when input is empty
+                return;
+            }
+
+            const filteredUsers = users.filter(user => 
+                user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query)
+            );
+
+            // Show and update the list only when there are results
+            userList.style.display = filteredUsers.length > 0 ? "block" : "none";
+            userList.innerHTML = filteredUsers.map(user => `<li><strong>${user.name}</strong> - ${user.email}</li>`).join("");
+        }
+    </script>
+</body>
+</html>
