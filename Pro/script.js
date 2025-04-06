@@ -12,6 +12,8 @@ const red=()=>{
     yellow.style.opacity='1';
     let pink = document.querySelector('.pink')
     pink.style.opacity='1';
+    let brown = document.querySelector('.brown')
+    brown.style.opacity='1';
 }
 const green=()=>{
     let green = document.querySelector('#sec4')
@@ -26,6 +28,8 @@ const green=()=>{
     pink.style.opacity='1';
     let red = document.querySelector('.red')
     red.style.opacity='1';
+    let brown = document.querySelector('.brown')
+    brown.style.opacity='1';
 }
 const yellow=()=>{
     let yellow = document.querySelector('#sec4')
@@ -40,6 +44,8 @@ const yellow=()=>{
     pink.style.opacity='1';
     let red = document.querySelector('.red')
     red.style.opacity='1';
+    let brown = document.querySelector('.brown')
+    brown.style.opacity='1';
 }
 const blue=()=>{
     let blue = document.querySelector('#sec4')
@@ -54,6 +60,8 @@ const blue=()=>{
     pink.style.opacity='1';
     let red = document.querySelector('.red')
     red.style.opacity='1';
+    let brown = document.querySelector('.brown')
+    brown.style.opacity='1';
 }
 const pink=()=>{
     let pink = document.querySelector('#sec4')
@@ -68,4 +76,22 @@ const pink=()=>{
     yellow.style.opacity='1';
     let red = document.querySelector('.red')
     red.style.opacity='1';
+    let brown = document.querySelector('.brown')
+    brown.style.opacity='1';
+}
+const brown=()=>{
+    let brown = document.querySelector('#sec4')
+    brown.style.backgroundColor='brown';
+    hide = document.querySelector('.brown')
+    hide.style.opacity='0';
+    let blue = document.querySelector('.blue')
+    blue.style.opacity='1';
+    let green = document.querySelector('.green')
+    green.style.opacity='1';
+    let yellow = document.querySelector('.yellow')
+    yellow.style.opacity='1';
+    let red = document.querySelector('.red')
+    red.style.opacity='1';
+    let pink = document.querySelector('.pink')
+    pink.style.opacity='1';
 }
